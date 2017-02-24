@@ -15,6 +15,7 @@ docker run -tdi \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -v /dev/bus/usb:/dev/bus/usb \
     -v /dev/kvm:/dev/kvm \
+    --device=/dev/dri:/dev/dri \
     -v $HOME/.Xauthority:/home/developer/.Xauthority \
     -v dev_home:/home/developer/ \
     zanyxdev/dev-androidstudio:latest
