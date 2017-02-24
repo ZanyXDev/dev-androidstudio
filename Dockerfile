@@ -21,6 +21,8 @@ RUN unzip /tmp/studio.zip -d /opt && \
     chown -R developer:developer /opt/android-studio  && \
     rm /tmp/studio.zip
 
+RUN usermod -a -G video developer
+
 VOLUME /home/developer
 
 # Set things up using the dev user and reduce the need for `chown`s
