@@ -21,6 +21,8 @@ RUN unzip /tmp/studio.zip -d /opt && \
     chown -R developer:developer /opt/android-studio  && \
     rm /tmp/studio.zip
 
+RUN apt-get update && apt-get install -y python
+
 RUN usermod -a -G video developer
 
 VOLUME /home/developer
